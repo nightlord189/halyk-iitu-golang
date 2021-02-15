@@ -1,0 +1,22 @@
+[
+	{
+		"Id": 1,
+		"Name": "state1",
+		"Description": "state 1 description"
+	},
+	{
+		"Id": 2,
+		"Name": "state2",
+		"Description": "state 2 description"
+	},
+	{
+		"Id": 3,
+		"Name": "state3",
+		"Description": "state 3 description"
+	},
+	{
+		"Id": 4,
+		"Name": "newivanstate",
+		"Description": "new ivan state description"
+	}
+]

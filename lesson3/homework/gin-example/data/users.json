@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "LastName": "Иванов",
+    "FirstName": "Иван",
+    "Birth": "2020-01-01",
+    "Login": "ivan",
+    "StateID": 1,
+    "Password": "ivan"
+  },
+  {
+    "id": 2,
+    "LastName": "Петров",
+    "FirstName": "Петр",
+    "Login": "petr",
+    "Birth": "2020-02-02",
+    "StateID": 2,
+    "Password": "petr"
+  },
+  {
+    "id": 3,
+    "Login": "sidr",
+    "LastName": "Сидоров",
+    "FirstName": "Сидр",
+    "Birth": "2020-03-03",
+    "StateID": 3,
+    "Password": "sidr"
+  }
+]
