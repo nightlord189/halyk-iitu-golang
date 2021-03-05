@@ -1,0 +1,97 @@
+basePath: /
+definitions:
+  model.Response:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+  model.User:
+    properties:
+      authCount:
+        type: integer
+      email:
+        example: test@mail.com
+        type: string
+      id:
+        type: integer
+      isAdmin:
+        type: boolean
+      lastname:
+        example: Packard
+        type: string
+      name:
+        example: Jack
+        type: string
+    type: object
+host: localhost:8081
+info:
+  contact:
+    email: aburavov189@gmail.com
+    name: API Support
+    url: http://www.swagger.io/support
+  description: Sample server for Halyk-IITU Go course
+  license: {}
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Example
+  version: "1.0"
+paths:
+  /user:
+    post:
+      consumes:
+      - application/json
+      description: update user in example servuce
+      parameters:
+      - description: Model to update
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.Response'
+      summary: Update user
+      tags:
+      - Users
+  /user/{id}:
+    get:
+      consumes:
+      - application/json
+      description: get sample user from in-memory logic
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: search by email
+        format: email
+        in: query
+        name: email
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/model.Response'
+      summary: Get user
+      tags:
+      - Users
+swagger: "2.0"
